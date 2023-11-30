@@ -1,4 +1,6 @@
 import { Sequelize } from "sequelize";
+import { CONFIG } from "../config";
+const connString = `${CONFIG.dbDialect}://${CONFIG.dbUserName}:${CONFIG.dbPassword}@${CONFIG.dbHost}:${CONFIG.dbPort}/${CONFIG.dbName}`;
 
-// TODO: This should be external config
-export const sequelize = new Sequelize("sqlite::memory:");
+
+export const sequelize = new Sequelize(connString);

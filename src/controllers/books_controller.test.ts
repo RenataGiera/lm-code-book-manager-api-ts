@@ -159,4 +159,6 @@ describe("Delete /api/v1/books/{bookId} endpoint", () => {
 		expect(res.statusCode).toEqual(204);
 		expect(res.body.length).toEqual(undefined);
 	});
+
 });
+
