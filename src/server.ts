@@ -10,8 +10,4 @@ console.log(`🌍 Running in ${environment} environment`);
 app.listen(PORT, () => {
 	console.log(`🚂 Express started on port ${PORT}`);
 
-	// Seed the database with some data
-	if (environment === "dev") {
-		populateDummyData();
-	}
 });
